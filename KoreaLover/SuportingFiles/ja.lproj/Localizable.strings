@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  KoreaLover
+
+  Created by 김승진 on 2018. 8. 30..
+  Copyright © 2018년 김승진. All rights reserved.
+*/
+
+"LOGIN_WELCOM" = "韓国の観光、文化、祭り、レジャーを一度！";
+"LOGIN_EMAIL_LOGIN" = "メールログイン";
+"LOGIN_FACEBOOK_LOGIN" = "フェイスブックログイン";
+"LOGIN_SKIP" = "Skip";
+"LOGIN_SIGNUP" = "サインアップ";
+"LOGIN_SIGNIN" = "サインイン";
+"LOGIN_EMAIL_ADDRESS" = "メールアドレス";
+"LOGIN_PW" = "パスワード";
+"LOGIN_FIND_PW" = "パスワードをお忘れですか?";
