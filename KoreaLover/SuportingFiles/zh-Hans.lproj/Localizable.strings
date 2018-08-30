@@ -14,4 +14,8 @@
 "LOGIN_SIGNIN" = "签到";
 "LOGIN_EMAIL_ADDRESS" = "电邮地址";
 "LOGIN_PW" = "忘记密码了吗";
+"LOGIN_PW_CONFIRM" = "确认密码";
 "LOGIN_FIND_PW" = "忘记密码?";
+"LOGIN_ERROR_WRONG_PASSWORD" = "密码无效或用户没有密码。";
+"LOGIN_ERROR_USER_NOT_FOUND" = "没有与此标识符对应的用户记录。";
+"LOGIN_ERROR_USER_DISABLED" = "您的帐户已禁用。";

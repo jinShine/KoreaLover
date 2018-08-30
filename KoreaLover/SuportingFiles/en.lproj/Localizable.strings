@@ -14,4 +14,9 @@
 "LOGIN_SIGNIN" = "SignIn";
 "LOGIN_EMAIL_ADDRESS" = "Email Address";
 "LOGIN_PW" = "Password";
+"LOGIN_PW_CONFIRM" = "Confirm Password";
 "LOGIN_FIND_PW" = "Forgot your password?";
+"LOGIN_ERROR_WRONG_PASSWORD" = "The password is invalid or the user does not have a password.";
+"LOGIN_ERROR_USER_NOT_FOUND" = "There is no user record corresponding to this identifier.";
+"LOGIN_ERROR_USER_DISABLED" = "Your account has been disabled.";
+

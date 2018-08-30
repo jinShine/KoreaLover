@@ -14,4 +14,8 @@
 "LOGIN_SIGNIN" = "サインイン";
 "LOGIN_EMAIL_ADDRESS" = "メールアドレス";
 "LOGIN_PW" = "パスワード";
+"LOGIN_PW_CONFIRM" = "パスワードを認証する";
 "LOGIN_FIND_PW" = "パスワードをお忘れですか?";
+"LOGIN_ERROR_WRONG_PASSWORD" = "パスワードが無効であるか、ユーザーにパスワードがありません。";
+"LOGIN_ERROR_USER_NOT_FOUND" = "この識別子に対応するユーザーレコードはありません。";
+"LOGIN_ERROR_USER_DISABLED" = "あなたのアカウントは無効になっています。";

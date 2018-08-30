@@ -14,4 +14,8 @@
 "LOGIN_SIGNIN" = "로그인";
 "LOGIN_EMAIL_ADDRESS" = "이메일 주소";
 "LOGIN_PW" = "비밀번호";
+"LOGIN_PW_CONFIRM" = "비밀번호 확인";
 "LOGIN_FIND_PW" = "비밀번호를 잊어 버렸나요?";
+"LOGIN_ERROR_WRONG_PASSWORD" = "잘못된 비밀번호 입니다.";
+"LOGIN_ERROR_USER_NOT_FOUND" = "이메일 주소의 형식이 잘못되었습니다.";
+"LOGIN_ERROR_USER_DISABLED" = "사용자의 계정이 사용 중지 되었습니다.";

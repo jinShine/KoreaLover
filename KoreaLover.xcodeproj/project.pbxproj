@@ -15,6 +15,10 @@
 		15EAAB5C2137F7E200E57CFD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EAAB5B2137F7E200E57CFD /* Login.storyboard */; };
 		15EAAB652138095300E57CFD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15EAAB672138095300E57CFD /* Localizable.strings */; };
 		15EAAB6F21381D1900E57CFD /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAAB6E21381D1900E57CFD /* EmailLoginViewController.swift */; };
+		15EAAB71213838D000E57CFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15EAAB70213838CF00E57CFD /* GoogleService-Info.plist */; };
+		15EAAB7321383B0900E57CFD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAAB7221383B0900E57CFD /* SignUpViewController.swift */; };
+		15EAAB7521386E7900E57CFD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAAB7421386E7900E57CFD /* ErrorHandler.swift */; };
+		22122EDD62040D14571C6C1C /* Pods_KoreaLover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2579DED09E311A318A76AB5 /* Pods_KoreaLover.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,12 @@
 		15EAAB692138095500E57CFD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		15EAAB6A2138095700E57CFD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		15EAAB6E21381D1900E57CFD /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		15EAAB70213838CF00E57CFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		15EAAB7221383B0900E57CFD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		15EAAB7421386E7900E57CFD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		D7B5DACE9673AFFF2AB62C48 /* Pods-KoreaLover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaLover.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoreaLover/Pods-KoreaLover.release.xcconfig"; sourceTree = "<group>"; };
+		E2579DED09E311A318A76AB5 /* Pods_KoreaLover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreaLover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7C0E81F4F607930F52039B /* Pods-KoreaLover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaLover.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoreaLover/Pods-KoreaLover.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22122EDD62040D14571C6C1C /* Pods_KoreaLover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +66,8 @@
 			children = (
 				15EAAB412137E12700E57CFD /* KoreaLover */,
 				15EAAB402137E12700E57CFD /* Products */,
+				6468CE3B12B7CB85D7B2C263 /* Pods */,
+				3991219DAEB377A89754025F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +101,7 @@
 		15EAAB552137F50500E57CFD /* SuportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				15EAAB70213838CF00E57CFD /* GoogleService-Info.plist */,
 				15EAAB4E2137E12900E57CFD /* Info.plist */,
 				15EAAB672138095300E57CFD /* Localizable.strings */,
 			);
@@ -108,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				15EAAB422137E12700E57CFD /* AppDelegate.swift */,
-				15EAAB582137F53F00E57CFD /* LoginVC */,
 				15EAAB6B21380A6700E57CFD /* Utility */,
+				15EAAB582137F53F00E57CFD /* LoginVC */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -119,6 +133,7 @@
 			children = (
 				15EAAB592137F55E00E57CFD /* LoginEntryViewController.swift */,
 				15EAAB6E21381D1900E57CFD /* EmailLoginViewController.swift */,
+				15EAAB7221383B0900E57CFD /* SignUpViewController.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -126,8 +141,26 @@
 		15EAAB6B21380A6700E57CFD /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				15EAAB7421386E7900E57CFD /* ErrorHandler.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		3991219DAEB377A89754025F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2579DED09E311A318A76AB5 /* Pods_KoreaLover.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6468CE3B12B7CB85D7B2C263 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA7C0E81F4F607930F52039B /* Pods-KoreaLover.debug.xcconfig */,
+				D7B5DACE9673AFFF2AB62C48 /* Pods-KoreaLover.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15EAAB512137E12900E57CFD /* Build configuration list for PBXNativeTarget "KoreaLover" */;
 			buildPhases = (
+				523FD89606E9F8C36DD5D291 /* [CP] Check Pods Manifest.lock */,
 				15EAAB3B2137E12700E57CFD /* Sources */,
 				15EAAB3C2137E12700E57CFD /* Frameworks */,
 				15EAAB3D2137E12700E57CFD /* Resources */,
+				FA99E9735DD7452A80D2709C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,10 +231,56 @@
 				15EAAB4D2137E12900E57CFD /* LaunchScreen.storyboard in Resources */,
 				15EAAB4A2137E12900E57CFD /* Assets.xcassets in Resources */,
 				15EAAB482137E12700E57CFD /* Main.storyboard in Resources */,
+				15EAAB71213838D000E57CFD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		523FD89606E9F8C36DD5D291 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoreaLover-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA99E9735DD7452A80D2709C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KoreaLover/Pods-KoreaLover-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoreaLover/Pods-KoreaLover-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15EAAB3B2137E12700E57CFD /* Sources */ = {
@@ -208,6 +289,8 @@
 			files = (
 				15EAAB5A2137F55E00E57CFD /* LoginEntryViewController.swift in Sources */,
 				15EAAB6F21381D1900E57CFD /* EmailLoginViewController.swift in Sources */,
+				15EAAB7521386E7900E57CFD /* ErrorHandler.swift in Sources */,
+				15EAAB7321383B0900E57CFD /* SignUpViewController.swift in Sources */,
 				15EAAB432137E12700E57CFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +452,7 @@
 		};
 		15EAAB522137E12900E57CFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA7C0E81F4F607930F52039B /* Pods-KoreaLover.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,6 +472,7 @@
 		};
 		15EAAB532137E12900E57CFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B5DACE9673AFFF2AB62C48 /* Pods-KoreaLover.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

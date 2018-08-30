@@ -1,0 +1,6 @@
+framework module Pods_KoreaLover {
+  umbrella header "Pods-KoreaLover-umbrella.h"
+
+  export *
+  module * { export * }
+}
