@@ -12,11 +12,17 @@
 "LOGIN_SKIP" = "Skip";
 "LOGIN_SIGNUP" = "SignUp";
 "LOGIN_SIGNIN" = "SignIn";
+"LOGIN_OK" = "OK";
 "LOGIN_EMAIL_ADDRESS" = "Email Address";
 "LOGIN_PW" = "Password";
 "LOGIN_PW_CONFIRM" = "Confirm Password";
 "LOGIN_FIND_PW" = "Forgot your password?";
+"LOGIN_FORGOT_PW" = "Find Password";
 "LOGIN_ERROR_WRONG_PASSWORD" = "The password is invalid or the user does not have a password.";
 "LOGIN_ERROR_USER_NOT_FOUND" = "There is no user record corresponding to this identifier.";
 "LOGIN_ERROR_USER_DISABLED" = "Your account has been disabled.";
-
+"LOGIN_ERROR_NOT_MATCH" = "Passwords do not match.";
+"LOGIN_ERROR_VALID_PASSWORD" = "You must set a password of at least 6 characters including at least one special character.";
+"LOGIN_FIND_PW_CONTENTS" = "Please enter your registered email to reset your password.\nWe'll send you an email at that address.";
+"LOGIN_FIND_PW_RESET" = "I sent you an email. Tap the link in the email to reset your password.";
+"LOGIN_CHECK_EMAIL" = "Check your email.";

@@ -18,6 +18,9 @@
 		15EAAB71213838D000E57CFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15EAAB70213838CF00E57CFD /* GoogleService-Info.plist */; };
 		15EAAB7321383B0900E57CFD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAAB7221383B0900E57CFD /* SignUpViewController.swift */; };
 		15EAAB7521386E7900E57CFD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAAB7421386E7900E57CFD /* ErrorHandler.swift */; };
+		15EAAB77213901ED00E57CFD /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAAB76213901ED00E57CFD /* FindPasswordViewController.swift */; };
+		15EAAB79213A66CE00E57CFD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EAAB78213A66CE00E57CFD /* Home.storyboard */; };
+		15EAAB7B213A6ABC00E57CFD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EAAB7A213A6ABC00E57CFD /* CoreLocation.framework */; };
 		22122EDD62040D14571C6C1C /* Pods_KoreaLover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2579DED09E311A318A76AB5 /* Pods_KoreaLover.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,9 @@
 		15EAAB70213838CF00E57CFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15EAAB7221383B0900E57CFD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		15EAAB7421386E7900E57CFD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		15EAAB76213901ED00E57CFD /* FindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewController.swift; sourceTree = "<group>"; };
+		15EAAB78213A66CE00E57CFD /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		15EAAB7A213A6ABC00E57CFD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D7B5DACE9673AFFF2AB62C48 /* Pods-KoreaLover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaLover.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoreaLover/Pods-KoreaLover.release.xcconfig"; sourceTree = "<group>"; };
 		E2579DED09E311A318A76AB5 /* Pods_KoreaLover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreaLover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7C0E81F4F607930F52039B /* Pods-KoreaLover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaLover.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoreaLover/Pods-KoreaLover.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15EAAB7B213A6ABC00E57CFD /* CoreLocation.framework in Frameworks */,
 				22122EDD62040D14571C6C1C /* Pods_KoreaLover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +118,7 @@
 		15EAAB562137F52100E57CFD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				15EAAB78213A66CE00E57CFD /* Home.storyboard */,
 				15EAAB5B2137F7E200E57CFD /* Login.storyboard */,
 				15EAAB462137E12700E57CFD /* Main.storyboard */,
 				15EAAB4B2137E12900E57CFD /* LaunchScreen.storyboard */,
@@ -134,6 +142,7 @@
 				15EAAB592137F55E00E57CFD /* LoginEntryViewController.swift */,
 				15EAAB6E21381D1900E57CFD /* EmailLoginViewController.swift */,
 				15EAAB7221383B0900E57CFD /* SignUpViewController.swift */,
+				15EAAB76213901ED00E57CFD /* FindPasswordViewController.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 		3991219DAEB377A89754025F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15EAAB7A213A6ABC00E57CFD /* CoreLocation.framework */,
 				E2579DED09E311A318A76AB5 /* Pods_KoreaLover.framework */,
 			);
 			name = Frameworks;
@@ -226,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15EAAB79213A66CE00E57CFD /* Home.storyboard in Resources */,
 				15EAAB652138095300E57CFD /* Localizable.strings in Resources */,
 				15EAAB5C2137F7E200E57CFD /* Login.storyboard in Resources */,
 				15EAAB4D2137E12900E57CFD /* LaunchScreen.storyboard in Resources */,
@@ -291,6 +302,7 @@
 				15EAAB6F21381D1900E57CFD /* EmailLoginViewController.swift in Sources */,
 				15EAAB7521386E7900E57CFD /* ErrorHandler.swift in Sources */,
 				15EAAB7321383B0900E57CFD /* SignUpViewController.swift in Sources */,
+				15EAAB77213901ED00E57CFD /* FindPasswordViewController.swift in Sources */,
 				15EAAB432137E12700E57CFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

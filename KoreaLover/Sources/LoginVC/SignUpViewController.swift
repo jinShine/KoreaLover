@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import NVActivityIndicatorView
 
 class SignUpViewController: UIViewController {
     
@@ -26,16 +27,23 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var backBtnTop: NSLayoutConstraint!
     
-    
+    private var activityView: NVActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupInit()
         
+        UIApplication.shared.statusBarStyle = .default
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(noti:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(noti:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -52,13 +60,18 @@ class SignUpViewController: UIViewController {
 
     
     @IBAction func signupAction(_ sender: UIButton) {
+        activityView.startAnimating()
         
         if let email = emailTextField.text {
             if let password = passwordTextField.text {
                 Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                     
-                    if error == nil {
-                        print(error.debugDescription)
+                    self.activityView.stopAnimating()
+                    
+                    if error != nil {
+                        if let err = error {
+                            self.errorContents.text = ((err as NSError).userInfo["NSLocalizedDescription"] as! String)
+                        }
                         return
                     }
                     
@@ -98,7 +111,8 @@ class SignUpViewController: UIViewController {
     
     private func setupInit() {
         setupLocalizedText()
-
+        setupActivityIndicator()
+        
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
@@ -112,6 +126,14 @@ class SignUpViewController: UIViewController {
         signupBtn.setTitle(NSLocalizedString("LOGIN_SIGNUP", comment: ""), for: UIControlState.normal)
     }
     
+    private func setupActivityIndicator() {
+        activityView = NVActivityIndicatorView(frame: CGRect(x: self.view.center.x - 50, y: self.view.center.y - 50, width: 100, height: 100), type: NVActivityIndicatorType.ballBeat, color: UIColor(red: 227/255.0, green: 72/255.0, blue: 99/255.0, alpha: 1), padding: 25)
+        
+        activityView.backgroundColor = .white
+        activityView.layer.cornerRadius = 10
+        self.view.addSubview(activityView)
+    }
+    
     @objc private func keyboardWillShow(noti: Notification) {
         
         let notiInfo = noti.userInfo! as Dictionary
@@ -119,7 +141,7 @@ class SignUpViewController: UIViewController {
         let keyboardHeight = keyboardFrame.size.height
         
         if self.view.frame.height - errorContents.frame.origin.y < keyboardHeight {
-            self.backBtnTop.constant = -keyboardHeight + (self.view.frame.height - errorContents.frame.origin.y)
+            self.backBtnTop.constant = -keyboardHeight - 30 + (self.view.frame.height - errorContents.frame.origin.y)
         }
         
         UIView.animate(withDuration: notiInfo[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval) {
@@ -164,7 +186,7 @@ extension SignUpViewController: UITextFieldDelegate {
         if textField == emailTextField {
             if let email = textField.text {
                 if !validateEmail(email: email) {
-                    errorContents.text = "유효한 이메일 주소를 입력하세요."
+                    errorContents.text = NSLocalizedString("LOGIN_ERROR_USER_NOT_FOUND", comment: "")
                 } else {
                     errorContents.text = ""
                 }
@@ -172,7 +194,7 @@ extension SignUpViewController: UITextFieldDelegate {
         } else if textField == passwordTextField {
             if let password = textField.text {
                 if !validatePassword(password: password) {
-                    errorContents.text = "최소 1개의 특수문자를 포함한 6자 이상의 비밀번호를 설정해야 합니다."
+                    errorContents.text = NSLocalizedString("LOGIN_ERROR_VALID_PASSWORD", comment: "")
                 } else {
                     errorContents.text = ""
                 }
@@ -182,7 +204,7 @@ extension SignUpViewController: UITextFieldDelegate {
                 let password = passwordTextField.text {
                 
                 if confirmPassword != password {
-                    errorContents.text = "비밀번호가 일치 하지 않습니다."
+                    errorContents.text = NSLocalizedString("LOGIN_ERROR_NOT_MATCH", comment: "")
                 } else {
                     errorContents.text = ""
                 }

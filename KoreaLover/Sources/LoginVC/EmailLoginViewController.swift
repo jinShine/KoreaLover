@@ -36,12 +36,15 @@ class EmailLoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(noti:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(noti:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         NotificationCenter.default.removeObserver(self)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,6 +119,8 @@ class EmailLoginViewController: UIViewController {
 
                     print("로그인 성공")
                     self.view.endEditing(true)
+                    
+                    //TODO: - 메인으로 가기
                 }
             }
         }
@@ -127,7 +132,8 @@ class EmailLoginViewController: UIViewController {
     }
     
     @IBAction func findPWAction(_ sender: UIButton) {
-        
+        let findPWVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "FindPasswordViewController")
+        self.navigationController?.pushViewController(findPWVC, animated: true)
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {

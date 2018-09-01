@@ -12,10 +12,18 @@
 "LOGIN_SKIP" = "건너뛰기";
 "LOGIN_SIGNUP" = "회원가입";
 "LOGIN_SIGNIN" = "로그인";
+"LOGIN_OK" = "확인";
 "LOGIN_EMAIL_ADDRESS" = "이메일 주소";
 "LOGIN_PW" = "비밀번호";
 "LOGIN_PW_CONFIRM" = "비밀번호 확인";
 "LOGIN_FIND_PW" = "비밀번호를 잊어 버렸나요?";
+"LOGIN_FORGOT_PW" = "비밀번호 찾기";
 "LOGIN_ERROR_WRONG_PASSWORD" = "잘못된 비밀번호 입니다.";
 "LOGIN_ERROR_USER_NOT_FOUND" = "이메일 주소의 형식이 잘못되었습니다.";
 "LOGIN_ERROR_USER_DISABLED" = "사용자의 계정이 사용 중지 되었습니다.";
+"LOGIN_ERROR_NOT_MATCH" = "비밀번호가 일치 하지 않습니다.";
+"LOGIN_ERROR_VALID_PASSWORD" = "최소 1개의 특수문자를 포함한 6자 이상의 비밀번호를 설정해야 합니다.";
+"LOGIN_FIND_PW_CONTENTS" = "비밀번호를 다시 설정하려면 등록한 이메일을 입력해 주세요.\n해당 주소로 메일을 보내드립니다.";
+"LOGIN_FIND_PW_RESET" = "(으)로 이메일을 보내드렸습니다. 이메일에 포함된 링크를 탭하여 비밀번호를 다시 설정하세요.";
+"LOGIN_CHECK_EMAIL" = "이메일을 확인해보세요.";
+

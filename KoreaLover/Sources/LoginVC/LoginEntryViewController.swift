@@ -23,6 +23,7 @@ class LoginEntryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
@@ -45,7 +46,7 @@ class LoginEntryViewController: UIViewController {
         
         self.facebookLogin.layer.cornerRadius = 20
         self.facebookLogin.layer.masksToBounds = true
-        self.facebookLogin.setTitle(NSLocalizedString("LOGIN_EMAIL_LOGIN", comment: ""), for: UIControlState.normal)
+        self.facebookLogin.setTitle(NSLocalizedString("LOGIN_FACEBOOK_LOGIN", comment: ""), for: UIControlState.normal)
     }
 
     @IBAction func emailLoginAction(_ sender: UIButton) {
